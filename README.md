@@ -11,9 +11,9 @@ In molecular biology, splice junctions are boundaries between exons and introns 
 **Classes:**
 | Label | Meaning |
 |-------|---------|
-| EI | Exon to Intron transition |
-| IE | Intron to Exon transition |
-| N | Neither (no splice junction) |
+| `EI` | Exon to Intron transition |
+| `IE` | Intron to Exon transition |
+| `N` | Neither (no splice junction) |
 
 ---
 
@@ -36,14 +36,14 @@ Evaluated with **Stratified K-Fold Cross-Validation (k=5)**:
 | Random Forest | **0.9487 +/- 0.0101** |
 | MLP Classifier | 0.9434 +/- 0.0121 |
 
-Confusion matrices are saved in 
-esults/confusion_matrices.png.
+Confusion matrices are saved in `results/confusion_matrices.png`.
 
 ---
 
 ## Project Structure
 
-\splice-junction-classifier/
+```
+splice-junction-classifier/
 ├── data/
 ├── notebooks/
 │   └── eda.ipynb           # Exploratory Data Analysis
@@ -56,25 +56,28 @@ esults/confusion_matrices.png.
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-\
+```
+
 ---
 
 ## Setup
 
-\\ash
+```bash
 pip install -r requirements.txt
-\
-> Requires a Kaggle API key. Download \kaggle.json\ from your Kaggle account settings and place it in \~/.kaggle/\.
+```
+
+> Requires a Kaggle API key. Download `kaggle.json` from your Kaggle account settings and place it in `~/.kaggle/`.
 
 ---
 
 ## Usage
 
-\\ash
+```bash
 python src/preprocess.py   # Explore the dataset
 python src/train.py        # Train and compare models
 python src/evaluate.py     # Generate confusion matrices
-\
+```
+
 ---
 
 ## Tech Stack
